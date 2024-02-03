@@ -1,20 +1,27 @@
 #Author: Sameer
 #Keywords Summary :
-@tag
 Feature: Login Functionality
   I want to login into ecommerce website
 
-  @Login
-  Scenario: User can login with valid credential
-    Given User is on Ecomm home page
-    
-    
-    #Given Open the Firefox and launch the application
-    #When Enter the Username and Password
-    #Then Reset the credential 
+  Background: 
+    Given the user is on the website page
 
-    #first branch change
-    
-    # commit
-    
-    #new branch sameer 1 
+  @Login
+  Scenario Outline: 
+    When User clicks sign in button
+    Then User enters username "<username>" and password "<password>" and click login
+    And user should be logged in successfully
+
+    Examples: 
+      | username               | password |
+      | testecomm335@gmail.com | Test@123 |
+
+  @Signin
+  Scenario Outline: User successfully signs up with valid information
+    When User clicks sign up button
+    Then User enters valid registration details with Firstname "<firstName>", Lastname "<lastName>", email "<email>", and password "<password>"
+    And User should see User created
+
+    Examples: 
+      | firstName | lastName | email                     | password | error_message               |
+      | same      | test     | testecomm3+05@gmail.com | Test@123 | "Username is already taken" |

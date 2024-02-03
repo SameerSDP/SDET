@@ -1,36 +1,98 @@
 package Page;
 
+import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
+import org.openqa.selenium.support.ui.ExpectedConditions;
+import org.openqa.selenium.support.ui.WebDriverWait;
+
+import Utility.BaseMethod;
+import junit.framework.Assert;
 
 
 
 public class LoginPage {
 
 	private WebDriver driver;
+	BaseMethod base;
 	//Properties1 property = new Properties1();
 	public LoginPage(WebDriver driver) {
         this.driver = driver;
         PageFactory.initElements(driver, this);
     }
 	
-	@FindBy(id = "user-name")
+	@FindBy(id = "userId")
 	WebElement username;
 	
 	@FindBy(id = "password")
 	WebElement password;
 	
+
+	@FindBy(id = "confirm-password")
+	WebElement confirm_password;
 	
-	@FindBy(id = "login-button")
-	WebElement loginbutton;
+	@FindBy(id = "firstName")
+	WebElement firstName;
 	
-	public void login() {
-		username.sendKeys("standard_user");
-		password.sendKeys("secret_sauce");
-		loginbutton.click();
-		
-		System.out.println("Loggedin with standard_user ");
+	@FindBy(id = "lastName")
+	WebElement lastName;
+	
+	@FindBy(id = "logonId")
+	WebElement logonId;
+	
+	@FindBy(xpath  = "//span[text()='Sign In']")
+	WebElement SigInIcon;
+	
+	@FindBy(xpath  = "//button[text()='Sign In']")
+	WebElement SigInClick;
+	
+	
+	@FindBy(xpath  = "//a[@href='/registration']")
+	WebElement CreateAccount;
+	
+	
+	@FindBy(xpath  = "//button[text()='Create Account']")
+	WebElement btnCreateAccount;
+	
+	
+	
+	@FindBy(xpath  = "//span[text()='Account Info']")
+	WebElement accountInfo;
+	
+	
+	public void enterSignInCredential(String userName, String pwd) {
+
+		username.sendKeys(userName);
+		password.sendKeys(pwd);
+		SigInClick.click();
 	}
+	
+	public void ClickOnSigninIcon() {
+		SigInIcon.click();
+	}
+	
+	public void ClickOnSignUpbutton() {
+		SigInIcon.click();
+		CreateAccount.click();
+	}
+	
+	public void EnterRegistrationdetails(String firstName, String lastName,  String email, String password) {
+		this.firstName.sendKeys(firstName);
+		this.lastName.sendKeys(lastName);
+		this.logonId.sendKeys(email);
+		this.password.sendKeys(password);
+		this.confirm_password.sendKeys(password);
+		
+		//WebDriverWait wait = new WebDriverWait(driver, 10);// 10 seconds timeout
+       // wait.until(ExpectedConditions.elementToBeClickable(btnCreateAccount));
+		//btnCreateAccount.click();
+		base.clickElementWithJavaScript(btnCreateAccount, driver);
+	}
+	
+	 public boolean isUserCreatedMessageDisplayed() {
+	        
+	        return accountInfo.isDisplayed();
+	    }
 }
