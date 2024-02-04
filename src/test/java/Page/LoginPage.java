@@ -17,7 +17,7 @@ public class LoginPage {
 
 	private WebDriver driver;
 	BaseMethod base;
-	//Properties1 property = new Properties1();
+	
 	public LoginPage(WebDriver driver) {
         this.driver = driver;
         PageFactory.initElements(driver, this);
@@ -85,9 +85,7 @@ public class LoginPage {
 		this.password.sendKeys(password);
 		this.confirm_password.sendKeys(password);
 		
-		//WebDriverWait wait = new WebDriverWait(driver, 10);// 10 seconds timeout
-       // wait.until(ExpectedConditions.elementToBeClickable(btnCreateAccount));
-		//btnCreateAccount.click();
+		
 		base.clickElementWithJavaScript(btnCreateAccount, driver);
 	}
 	

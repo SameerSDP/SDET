@@ -20,7 +20,7 @@ public class MainPage extends BaseStep {
 	@Before
 	public void setup() {
 
-		driver = GetDriver();
+		//driver = GetDriver();
 		main = PageFactory.initElements(driver, MainPage.class);
 		
 	}

@@ -28,27 +28,24 @@ public class LoginSteps extends BaseStep {
 	WebDriver driver;
 	Page.MainPage main;
 	Page.LoginPage login;
+	//private LoginPage login = new LoginPage(driver);
 	 //private static final Logger logger = Logger.getLogger(LoginSteps.class);
 	
-	
-	 @Before
-		public void setup() {
+	public LoginSteps() {
+	  	driver = Hooks.getDriver();
+    	login = new LoginPage(driver);
+	}
 
-			driver = GetDriver();
-			//login = PageFactory.initElements(driver, LoginPage.class);
-			this.login = new LoginPage(driver);
-		}
-	
-	
-    
     @Given("the user is on the website page")
     public void givenTheUserIsOnTheWebsitePage() {
-       driver.get("https://tst2.mooresclothing.ca/");
+
+       driver.get("https://mooresclothing.ca/");
        
     }
 
     @When("User clicks sign in button")
     public void whenUserClicksSignInButton() {
+    	//this.login = new LoginPage(driver);
     	System.out.println("sign in ");
     	login.ClickOnSigninIcon();
     	
@@ -86,6 +83,10 @@ public class LoginSteps extends BaseStep {
         assertTrue(login.isUserCreatedMessageDisplayed());
     }
     
+    @After
+	public void tearDown() {
+		BrowserInit.CloseBrowser();
+	}
    
     
     

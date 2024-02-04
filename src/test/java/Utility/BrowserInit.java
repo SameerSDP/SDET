@@ -15,11 +15,10 @@ public class BrowserInit {
 	
 	//Open Browser
 	
-	@Before
+	
 	public static WebDriver LaunchBrowser() {
 
-		//System.setProperty("webdriver.chrome.driver", "./Drivers/chromedriver.exe");
-		//driver = new ChromeDriver();
+		
 		
 		
 		WebDriverManager.edgedriver().setup();
@@ -32,7 +31,7 @@ public class BrowserInit {
 		
 	}
 	
-	@After
+
 	public static void CloseBrowser() {
 		System.out.println("On browser tear down");
 		if (driver != null) {
