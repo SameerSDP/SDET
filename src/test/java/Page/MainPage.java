@@ -25,8 +25,8 @@ public class MainPage extends BaseStep {
 		
 	}
 	
-	@After
-	public void tearDown() {
-		BrowserInit.CloseBrowser();
-	}
+//	@After
+//	public void tearDown() {
+//		BrowserInit.CloseBrowser();
+//	}
 }

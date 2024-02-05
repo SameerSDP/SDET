@@ -18,4 +18,17 @@ public class BaseMethod {
         JavascriptExecutor executor = (JavascriptExecutor) driver;
         executor.executeScript("arguments[0].click();", element);
     }
+	
+	 public String getSearchTextFromExcel() {
+	        String searchText;
+			try {
+				searchText = ExcelUtility.getCellValue(2, 1);
+				return searchText;
+			} catch (Exception e) {
+				// TODO Auto-generated catch block
+				e.printStackTrace();
+				return null;
+			}
+	        
+	    }
 }

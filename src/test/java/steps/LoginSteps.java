@@ -1,8 +1,9 @@
 package steps;
 
 import static org.testng.Assert.assertTrue;
+import io.cucumber.java.Scenario;
 
-import org.apache.log4j.Logger;
+
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
@@ -11,6 +12,7 @@ import org.openqa.selenium.support.PageFactory;
 
 import Page.LoginPage;
 import Utility.BrowserInit;
+import Utility.ConfigReader;
 import io.cucumber.java.After;
 import io.cucumber.java.Before;
 import io.cucumber.java.Scenario;
@@ -38,8 +40,8 @@ public class LoginSteps extends BaseStep {
 
     @Given("the user is on the website page")
     public void givenTheUserIsOnTheWebsitePage() {
-
-       driver.get("https://mooresclothing.ca/");
+    	String url = ConfigReader.getUrl();
+        driver.get(url);
        
     }
 
@@ -83,10 +85,7 @@ public class LoginSteps extends BaseStep {
         assertTrue(login.isUserCreatedMessageDisplayed());
     }
     
-    @After
-	public void tearDown() {
-		BrowserInit.CloseBrowser();
-	}
+   
    
     
     
