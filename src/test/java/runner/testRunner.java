@@ -12,6 +12,7 @@ import io.cucumber.testng.CucumberOptions;
 @CucumberOptions(
     features = "src/test/resources/search.feature",
     glue = {"steps", "steps.hooks"},
+   // tags = "@Search",
     plugin = {"pretty", "html:target/cucumber-reports/dsalgo.html" , "html:target/html-reports/report.html"}
 )
 public class testRunner extends AbstractTestNGCucumberTests{

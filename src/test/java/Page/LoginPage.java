@@ -17,10 +17,12 @@ public class LoginPage {
 
 	private WebDriver driver;
 	BaseMethod base;
+	private WebDriverWait wait;
 	
 	public LoginPage(WebDriver driver) {
         this.driver = driver;
         PageFactory.initElements(driver, this);
+        this.wait = new WebDriverWait(driver, 10);
     }
 	
 	@FindBy(id = "userId")
@@ -56,11 +58,19 @@ public class LoginPage {
 	@FindBy(xpath  = "//button[text()='Create Account']")
 	WebElement btnCreateAccount;
 	
-	
-	
+
 	@FindBy(xpath  = "//span[text()='Account Info']")
 	WebElement accountInfo;
 	
+	
+	
+	@FindBy(xpath  = "//div[@class='onetrust-banner-options accept-btn-only']//button")
+	WebElement btnAcceptCookies;
+	
+	public void acceptCookiePopUp() {
+		wait.until(ExpectedConditions.visibilityOf(btnAcceptCookies));
+		btnAcceptCookies.click();
+	}
 	
 	public void enterSignInCredential(String userName, String pwd) {
 
