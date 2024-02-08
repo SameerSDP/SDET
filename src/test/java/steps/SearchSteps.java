@@ -6,11 +6,16 @@ import junit.framework.Assert;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 
+import Page.CheckoutPage;
 import Page.LoginPage;
 import Page.PDPage;
 import Page.SearchPage;
 import io.cucumber.java.en.And;
 import io.cucumber.java.en.Then;
+
+import java.util.Iterator;
+import java.util.concurrent.TimeUnit;
+
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 
@@ -19,14 +24,16 @@ public class SearchSteps {
 	Page.MainPage main;
 	Page.SearchPage search;
 	Page.PDPage pdp ;
+	Page.CheckoutPage checkout;
 	WebElement product;
+	WebElement firstProduct;
 	private static final Logger LOGGER = LogManager.getLogger(SearchSteps.class);
 
 	public SearchSteps() {
 		driver = Hooks.getDriver();
 		search = new SearchPage(driver);
 		pdp = new PDPage(driver);
-
+		checkout = new CheckoutPage(driver);
 	}
 
 	@When("User clicks search icon")
@@ -70,6 +77,11 @@ public class SearchSteps {
 		search.navigatetoProductDetailsPage(product);
 	}
 	
+	@And("navigates to the first product details page")
+	public void navigateToFirstProductDetailsPage() {
+		search.navigatetoProductDetailsPage(firstProduct);
+	}
+	
     @And("the user selects {string} and {string} of product")
     public void userSelectsColorAndSize(String color, String size) {
         WebElement colorElement = pdp.getColorSwatchFromColor(color);
@@ -83,19 +95,66 @@ public class SearchSteps {
     	pdp.clickAddToBag();
     	
     }
+    
+    @And("the user adds the updated product to the shopping cart")
+    public void userAddsUpdatedProductToShoppingCart() throws InterruptedException {
+    	checkout.clickOnUpdate();
+    	Thread.sleep(5000);
+    	
+    }
 
     @Then("user able to see Add to Bag confirmation pop up")
     public void userSeesAddToBagConfirmationPopup() {
-        // Implementation to verify the presence of the Add to Bag confirmation popup
+        pdp.verifyAddedToBagConfirmation();
     }
 
     @When("User clicks on Checkout")
     public void userClicksOnCheckout() {
-        // Implementation for clicking on the Checkout button
+        pdp.clickCheckoutFromSlider();
     }
 
     @Then("User able to see Cart page with product {string}")
     public void userSeesCartPageWithProduct(String productName) {
-        // Implementation to verify that the Cart page displays the specified product
+       
+       
+       org.testng.Assert.assertEquals(checkout.getSKUName(), productName);
+       
+    }
+    
+    @Then("the user selects first product from the search results")
+    public void selectFirstProduct() {
+    	 firstProduct = search.getFirstProductFromSearch();
+    	 
+		if (firstProduct == null) {
+			Assert.assertTrue(false);
+
+		}
+    	
+    }
+    
+    @And("User increase Quantity and updates {string}")
+    public void increaseAndUpdateQuantity(String newQuantity) {
+        int Quantity = Integer.parseInt(newQuantity);
+    	
+        if (Quantity==1) {
+        	pdp.increaseQuanity();
+		}
+        else {
+        	for(int qty = 1; qty<Quantity; qty++) {
+        		pdp.increaseQuanity();
+        	}
+		}
+        
+        
+    }
+    
+    @Then("User validate quantity {string} of product {string} added")
+    public void userValidateQuantityOfProductAdded(String quantity, String SKU) {
+       int count = checkout.getProductCountinCart(SKU);
+        
+       System.out.println("count is " +count);
+       System.out.println("quantity  is " +quantity);
+       
+       org.testng.Assert.assertEquals(count, Integer.parseInt(quantity));
     }
 }

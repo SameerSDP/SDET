@@ -10,9 +10,9 @@ import io.cucumber.testng.CucumberOptions;
 
 @RunWith(Cucumber.class)
 @CucumberOptions(
-    features = "src/test/resources/search.feature",
+    features = "src/test/resources/cart.feature",
     glue = {"steps", "steps.hooks"},
-   // tags = "@Search",
+    tags = "@updateCart",
     plugin = {"pretty", "html:target/cucumber-reports/dsalgo.html" , "html:target/html-reports/report.html"}
 )
 public class testRunner extends AbstractTestNGCucumberTests{

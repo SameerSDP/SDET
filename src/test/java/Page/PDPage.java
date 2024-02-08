@@ -32,6 +32,16 @@ public class PDPage {
 	
 	@FindBy(xpath = "//span[(contains(text(),'added to bag'))]//parent::h2")
 	WebElement AddedToBagConfirmText;
+	
+
+	@FindBy(xpath = "//i[@title='Add']")
+	WebElement addQuantity;
+	
+	
+	
+	@FindBy(xpath = "//span[text()='CHECKOUT']")
+	WebElement checkOut;
+	
 
 	public WebElement getColorSwatchFromColor(String color) {
 
@@ -102,5 +112,26 @@ public class PDPage {
 			Assert.assertTrue(false);
 		}
 	}
+	
+	public void clickCheckoutFromSlider() {
+		wait.until(ExpectedConditions.visibilityOf(checkOut));
+		if (checkOut.isDisplayed()) {
+			//checkOut.click();
+			base.clickElementWithJavaScript(checkOut, driver);
+		}
+		else {
+			Assert.assertTrue(false);
+		}
+	}
+	
 
+	public void increaseQuanity () {
+		wait.until(ExpectedConditions.visibilityOf(addQuantity));
+		if (addQuantity.isEnabled()) {
+			base.clickElementWithJavaScript(addQuantity, driver);
+		}
+		else {
+			System.out.println("Can not add quantity");
+		}
+	}
 }

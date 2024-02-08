@@ -42,7 +42,7 @@ public class LoginSteps extends BaseStep {
     public void givenTheUserIsOnTheWebsitePage() {
     	String url = ConfigReader.getUrl();
         driver.get(url);
-        login.acceptCookiePopUp();
+       // login.acceptCookiePopUp();
        
     }
 
