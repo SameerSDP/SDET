@@ -16,7 +16,7 @@ import io.cucumber.java.en.When;
 public class CartSteps {
 
 	WebDriver driver;
-	Page.MainPage main;
+	
 	Page.SearchPage search;
 	Page.PDPage pdp;
 	Page.CheckoutPage checkout;

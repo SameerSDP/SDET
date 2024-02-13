@@ -28,7 +28,7 @@ public class LoginSteps extends BaseStep {
 
 	
 	WebDriver driver;
-	Page.MainPage main;
+
 	Page.LoginPage login;
 	//private LoginPage login = new LoginPage(driver);
 	 //private static final Logger logger = Logger.getLogger(LoginSteps.class);

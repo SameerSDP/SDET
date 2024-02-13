@@ -21,7 +21,6 @@ import org.apache.logging.log4j.Logger;
 
 public class SearchSteps {
 	WebDriver driver;
-	Page.MainPage main;
 	Page.SearchPage search;
 	Page.PDPage pdp ;
 	Page.CheckoutPage checkout;
