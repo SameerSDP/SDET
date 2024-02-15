@@ -38,11 +38,5 @@ public class ConfigReader {
         return properties.getProperty("url");
     }
 
-    public static String getUsername() {
-        return properties.getProperty("username");
-    }
-
-    public static String getPassword() {
-        return properties.getProperty("password");
-    }
+   
 }

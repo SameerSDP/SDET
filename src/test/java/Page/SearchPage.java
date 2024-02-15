@@ -55,8 +55,6 @@ public class SearchPage {
 
 	@FindBy(xpath = "//h2[@class='name shortName'][1]")
 	WebElement firstProduct;
-	
-	
 
 	public void clickSearchIcon() {
 		wait.until(ExpectedConditions.elementToBeClickable(searchIcon)).click();
@@ -68,7 +66,9 @@ public class SearchPage {
 
 		// String searchtextExcel =base.getSearchTextFromExcel();
 		// searchText.sendKeys(searchtextExcel);
+
 		searchText.sendKeys(Keys.ENTER);
+
 		// searchIcon.click();
 	}
 
@@ -124,7 +124,7 @@ public class SearchPage {
 			wait.until(ExpectedConditions.visibilityOf(productNameonPDP));
 
 			if (!productNameonPDP.isDisplayed()) {
-				// Assert.assertTrue(false);
+				
 				Assert.assertTrue(false);
 			}
 		} catch (NoSuchElementException e) {
@@ -146,5 +146,4 @@ public class SearchPage {
 		}
 	}
 
-	
 }

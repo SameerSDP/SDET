@@ -27,20 +27,16 @@ public class CheckoutPage {
 
 	@FindBy(xpath = "//div[@class='product-part-number sku-box']/span[@class='sku-text']")
 	WebElement skuName;
-	
-	
-	
+
 	@FindBy(xpath = "//span[text()='Edit']")
 	WebElement editCart;
-	
-		
+
 	@FindBy(xpath = "//span[text()='Update']")
 	WebElement btnUpdate;
 
 	public String getSKUName() {
 		String name = skuName.getText();
 		String skuNumber = name.substring(name.indexOf("SKU: ") + "SKU: ".length());
-		System.out.println("SSKKKUU name : " + name);
 		return skuNumber;
 	}
 
@@ -50,12 +46,12 @@ public class CheckoutPage {
 		List<WebElement> productInCart = driver.findElements(By.xpath(xpath));
 		return productInCart.size();
 	}
-	
+
 	public void clickOnEdit() {
 		wait.until(ExpectedConditions.elementToBeClickable(editCart));
 		base.clickElementWithJavaScript(editCart, driver);
 	}
-	
+
 	public void clickOnUpdate() {
 		wait.until(ExpectedConditions.elementToBeClickable(editCart));
 		base.clickElementWithJavaScript(btnUpdate, driver);

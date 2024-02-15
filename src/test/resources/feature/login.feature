@@ -21,5 +21,5 @@ Feature: Login Functionality
     And User should see User created
 
     Examples: 
-      | firstName | lastName | email                   | password | error_message               |
-      | same      | test     | testecomm3+03@gmail.com | Test@123 | "Username is already taken" |
+      | firstName | lastName | email                   | password | 
+      | same      | test     | testecomm3+04@gmail.com | Test@123 | 

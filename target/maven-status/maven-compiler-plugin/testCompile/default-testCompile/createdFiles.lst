@@ -1,2 +1,15 @@
 steps\LoginSteps.class
+Page\CheckoutPage.class
+steps\SearchSteps.class
+Page\LoginPage.class
+Page\PDPage.class
+Utility\BrowserInit.class
+Utility\ConfigReader.class
+Utility\BaseMethod.class
+Utility\ScreenshotUtils.class
+steps\BaseStep.class
 runner\testRunner.class
+Page\SearchPage.class
+Utility\ExcelUtility.class
+steps\Hooks.class
+steps\CartSteps.class

@@ -27,21 +27,15 @@ public class PDPage {
 
 	@FindBy(xpath = "//span[text()='Add to Bag']//parent::button")
 	WebElement btnAddToBag;
-	
-	
-	
+
 	@FindBy(xpath = "//span[(contains(text(),'added to bag'))]//parent::h2")
 	WebElement AddedToBagConfirmText;
-	
 
 	@FindBy(xpath = "//i[@title='Add']")
 	WebElement addQuantity;
-	
-	
-	
+
 	@FindBy(xpath = "//span[text()='CHECKOUT']")
 	WebElement checkOut;
-	
 
 	public WebElement getColorSwatchFromColor(String color) {
 
@@ -51,7 +45,7 @@ public class PDPage {
 
 			return colorSwatch;
 		} catch (NoSuchElementException e) {
-			// TODO: handle exception
+
 			return null;
 		}
 
@@ -65,7 +59,6 @@ public class PDPage {
 
 			return sizeSwatch;
 		} catch (NoSuchElementException e) {
-			// TODO: handle exception
 			return null;
 		}
 	}
@@ -85,7 +78,7 @@ public class PDPage {
 			}
 
 		} catch (Exception e) {
-			// TODO: handle exception
+
 		}
 	}
 
@@ -94,43 +87,39 @@ public class PDPage {
 		try {
 			if (btnAddToBag.isEnabled()) {
 				btnAddToBag.click();
-				
+
 			} else {
 				System.out.println("Select size and color");
 			}
 		} catch (Exception e) {
-			// TODO: handle exception
+
 		}
 	}
-	
+
 	public void verifyAddedToBagConfirmation() {
 		wait.until(ExpectedConditions.visibilityOf(AddedToBagConfirmText));
 		if (AddedToBagConfirmText.isDisplayed()) {
 			Assert.assertTrue(true);
-		}
-		else {
+		} else {
 			Assert.assertTrue(false);
 		}
 	}
-	
+
 	public void clickCheckoutFromSlider() {
 		wait.until(ExpectedConditions.visibilityOf(checkOut));
 		if (checkOut.isDisplayed()) {
-			//checkOut.click();
+			// checkOut.click();
 			base.clickElementWithJavaScript(checkOut, driver);
-		}
-		else {
+		} else {
 			Assert.assertTrue(false);
 		}
 	}
-	
 
-	public void increaseQuanity () {
+	public void increaseQuanity() {
 		wait.until(ExpectedConditions.visibilityOf(addQuantity));
 		if (addQuantity.isEnabled()) {
 			base.clickElementWithJavaScript(addQuantity, driver);
-		}
-		else {
+		} else {
 			System.out.println("Can not add quantity");
 		}
 	}

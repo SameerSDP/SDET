@@ -21,7 +21,7 @@ Feature: Search functionality
 
     Examples: 
       | SKU          | color | size | quantity |
-      | MSP64LV30040 | Black | L    |        4 |
+      | MSP84FX14025 | Blue | XL   |        4 |
 
   @updateCart
   Scenario Outline: User supdates quantity of the product from cart
@@ -44,4 +44,4 @@ Feature: Search functionality
 
     Examples: 
       | SKU          | color | size | quantity | increaseQuantity |
-      | MSP64LV30040 | Black | L    |        4 |                1 |
+      | MSP84FX14025 | Blue | XL	    |        4 |                1 |

@@ -1,0 +1,14 @@
+2024-02-15 22:52:36 INFO  Hooks:51 - Navigated to url: https://www.mooresclothing.ca/
+2024-02-15 22:55:55 INFO  Hooks:51 - Navigated to url: https://www.mooresclothing.ca/
+2024-02-15 22:56:26 INFO  Hooks:51 - Navigated to url: https://www.mooresclothing.ca/
+2024-02-15 22:57:02 INFO  Hooks:51 - Navigated to url: https://www.mooresclothing.ca/
+2024-02-15 22:57:47 INFO  Hooks:51 - Navigated to url: https://www.mooresclothing.ca/
+2024-02-15 23:00:37 INFO  Hooks:51 - Navigated to url: https://www.mooresclothing.ca/
+2024-02-15 23:00:38 INFO  Hooks:43 - In Logger, clicking on search
+2024-02-15 23:00:39 INFO  Hooks:49 - Entering search text: red shirt
+2024-02-15 23:02:31 INFO  Hooks:51 - Navigated to url: https://www.mooresclothing.ca/
+2024-02-15 23:02:32 INFO  Hooks:43 - In Logger, clicking on search
+2024-02-15 23:02:34 INFO  Hooks:49 - Entering search text: red shirt
+2024-02-15 23:04:58 INFO  Hooks:51 - Navigated to url: https://www.mooresclothing.ca/
+2024-02-15 23:05:00 INFO  Hooks:43 - In Logger, clicking on search
+2024-02-15 23:05:01 INFO  Hooks:49 - Entering search text: red shirt

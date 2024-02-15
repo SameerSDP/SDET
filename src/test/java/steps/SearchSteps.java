@@ -16,8 +16,9 @@ import io.cucumber.java.en.Then;
 import java.util.Iterator;
 import java.util.concurrent.TimeUnit;
 
-import org.apache.logging.log4j.LogManager;
-import org.apache.logging.log4j.Logger;
+import org.apache.log4j.PropertyConfigurator;
+import org.apache.log4j.Logger;
+import org.apache.log4j.PropertyConfigurator;
 
 public class SearchSteps {
 	WebDriver driver;
@@ -26,24 +27,26 @@ public class SearchSteps {
 	Page.CheckoutPage checkout;
 	WebElement product;
 	WebElement firstProduct;
-	private static final Logger LOGGER = LogManager.getLogger(SearchSteps.class);
+	private static final Logger logger = Logger.getLogger(Hooks.class);
 
 	public SearchSteps() {
 		driver = Hooks.getDriver();
 		search = new SearchPage(driver);
 		pdp = new PDPage(driver);
 		checkout = new CheckoutPage(driver);
+		
 	}
 
 	@When("User clicks search icon")
 	public void userClicksSearchIcon() {
 		search.clickSearchIcon();
-		LOGGER.info("In Logger, clicking on search");
+		logger.info("In Logger, clicking on search");
 	}
 
 	@When("User enters search input {string}")
 	public void userEntersSearchInput(String search) {
 		this.search.enterSearchText(search);
+		logger.info("Entering search text: " + search);
 	}
 
 	@Then("User able to see search result")

@@ -16,8 +16,8 @@ public class BrowserInit {
 
 	static WebDriver driver;
 	
-	//Open Browser
 	
+	//Open Browser
 	
 	public static WebDriver LaunchBrowser() {
 		String browserName = ConfigReader.getBrowser();
@@ -43,6 +43,9 @@ public class BrowserInit {
 			}
 			
 			else {
+				
+				// default browser
+				
 				driver = new EdgeDriver();
 				driver.manage().window().maximize();
 				driver.manage().deleteAllCookies();
