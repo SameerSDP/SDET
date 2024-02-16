@@ -36,3 +36,42 @@
 2024-02-16 11:10:07 INFO  Hooks:51 - Navigated to url: https://www.mooresclothing.ca/
 2024-02-16 11:10:41 INFO  Hooks:46 - In Logger, clicking on search
 2024-02-16 11:10:41 INFO  Hooks:52 - Entering search text: red shirt
+2024-02-16 16:13:29 INFO  Hooks:51 - Navigated to url: https://www.mooresclothing.ca/
+2024-02-16 16:13:31 INFO  Hooks:46 - clicking on search
+2024-02-16 16:13:31 INFO  Hooks:52 - Entering search text: MSP84FX14025
+2024-02-16 16:30:59 INFO  Hooks:51 - Navigated to url: https://www.mooresclothing.ca/
+2024-02-16 16:31:01 INFO  Hooks:46 - clicking on search
+2024-02-16 16:31:01 INFO  Hooks:52 - Entering search text: MSP84FX14025
+2024-02-16 16:34:16 INFO  Hooks:51 - Navigated to url: https://www.mooresclothing.ca/
+2024-02-16 16:34:18 INFO  Hooks:46 - clicking on search
+2024-02-16 16:34:18 INFO  Hooks:52 - Entering search text: MSP64LT20025
+2024-02-16 16:34:26 INFO  Hooks:158 - Qty updated to 4
+2024-02-16 16:34:29 INFO  Hooks:118 - Successfully added to bag
+2024-02-16 16:34:31 INFO  Hooks:131 - Cart has the listed product
+2024-02-16 16:34:34 INFO  Hooks:152 - Qty increased by 1
+2024-02-16 16:39:23 INFO  Hooks:51 - Navigated to url: https://www.mooresclothing.ca/
+2024-02-16 16:39:25 INFO  Hooks:46 - clicking on search
+2024-02-16 16:39:25 INFO  Hooks:52 - Entering search text: MSP64LT20025
+2024-02-16 16:39:31 INFO  Hooks:158 - Qty updated to 4
+2024-02-16 16:39:33 INFO  Hooks:118 - Successfully added to bag
+2024-02-16 16:39:34 INFO  Hooks:131 - Cart has the listed product
+2024-02-16 16:39:53 INFO  Hooks:51 - Navigated to url: https://www.mooresclothing.ca/
+2024-02-16 16:39:54 INFO  Hooks:46 - clicking on search
+2024-02-16 16:39:54 INFO  Hooks:52 - Entering search text: MSP64LT20025
+2024-02-16 16:39:59 INFO  Hooks:158 - Qty updated to 4
+2024-02-16 16:40:01 INFO  Hooks:118 - Successfully added to bag
+2024-02-16 16:40:03 INFO  Hooks:131 - Cart has the listed product
+2024-02-16 16:40:06 INFO  Hooks:152 - Qty increased by 1
+2024-02-16 16:40:29 INFO  Hooks:51 - Navigated to url: https://www.mooresclothing.ca/
+2024-02-16 16:40:51 INFO  Hooks:51 - Navigated to url: https://www.mooresclothing.ca/
+2024-02-16 16:41:24 INFO  Hooks:51 - Navigated to url: https://www.mooresclothing.ca/
+2024-02-16 16:41:25 INFO  Hooks:46 - clicking on search
+2024-02-16 16:41:25 INFO  Hooks:52 - Entering search text: red shirt
+2024-02-16 16:41:47 INFO  Hooks:51 - Navigated to url: https://www.mooresclothing.ca/
+2024-02-16 16:41:48 INFO  Hooks:46 - clicking on search
+2024-02-16 16:41:48 INFO  Hooks:52 - Entering search text: red shirt
+2024-02-16 16:42:11 INFO  Hooks:51 - Navigated to url: https://www.mooresclothing.ca/
+2024-02-16 16:42:11 INFO  Hooks:46 - clicking on search
+2024-02-16 16:42:12 INFO  Hooks:52 - Entering search text: red shirt
+2024-02-16 16:42:18 INFO  Hooks:118 - Successfully added to bag
+2024-02-16 16:42:20 INFO  Hooks:131 - Cart has the listed product

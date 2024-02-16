@@ -26,7 +26,7 @@
       <span class="top-banner-title-font">Test results</span>
       <button id="button" class="button">Switch Retro Theme</button> <!-- button -->
       <br/>
-      <span class="top-banner-font-1">1 suite, 1 failed test</span>
+      <span class="top-banner-font-1">1 suite</span>
     </div> <!-- top-banner-root -->
     <div class="navigator-root">
       <div class="navigator-suite-header">
@@ -40,7 +40,7 @@
         <div class="rounded-window">
           <div class="suite-header light-rounded-window-top">
             <a href="#" panel-name="suite-Suite" class="navigator-link">
-              <span class="suite-name border-failed">Suite</span>
+              <span class="suite-name border-passed">Suite</span>
             </a> <!-- navigator-link -->
           </div> <!-- suite-header light-rounded-window-top -->
           <div class="navigator-suite-content">
@@ -93,21 +93,51 @@
               <div class="suite-section-content">
                 <ul>
                   <li>
-                    <span class="method-stats">1 method, 1 failed,   </span>
+                    <span class="method-stats">7 methods,   7 passed</span>
                   </li>
                   <li>
-                    <span class="method-list-title failed">Failed methods</span>
-                    <span class="show-or-hide-methods failed">
-                      <a href="#" panel-name="suite-Suite" class="hide-methods failed suite-Suite"> (hide)</a> <!-- hide-methods failed suite-Suite -->
-                      <a href="#" panel-name="suite-Suite" class="show-methods failed suite-Suite"> (show)</a> <!-- show-methods failed suite-Suite -->
+                    <span class="method-list-title passed">Passed methods</span>
+                    <span class="show-or-hide-methods passed">
+                      <a href="#" panel-name="suite-Suite" class="hide-methods passed suite-Suite"> (hide)</a> <!-- hide-methods passed suite-Suite -->
+                      <a href="#" panel-name="suite-Suite" class="show-methods passed suite-Suite"> (show)</a> <!-- show-methods passed suite-Suite -->
                     </span>
-                    <div class="method-list-content failed suite-Suite">
+                    <div class="method-list-content passed suite-Suite">
                       <span>
-                        <img src="failed.png" width="3%"/>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Suite" title="runner.testRunner" class="method navigator-link" hash-for-method="runScenario(&quot;User search valide product category on site&quot;, &quot;Search functionality&quot;)">runScenario("User search valide product category on site", "Search functionality")</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Suite" title="runner.testRunner" class="method navigator-link" hash-for-method="runScenario(&quot;User successfully signs up with valid information&quot;, &quot;Login Functionality&quot;)">runScenario("User successfully signs up with valid information", "Login Functionality")</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Suite" title="runner.testRunner" class="method navigator-link" hash-for-method="runScenario(&quot;User successfully login with valid information&quot;, &quot;Login Functionality&quot;)">runScenario("User successfully login with valid information", "Login Functionality")</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Suite" title="runner.testRunner" class="method navigator-link" hash-for-method="runScenario(&quot;User supdates quantity of the product from cart&quot;, &quot;Search functionality&quot;)">runScenario("User supdates quantity of the product from cart", "Search functionality")</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Suite" title="runner.testRunner" class="method navigator-link" hash-for-method="runScenario(&quot;User search specific product with SKU and adds product in cart&quot;, &quot;Search functionality&quot;)">runScenario("User search specific product with SKU and adds product in cart", "Search functionality")</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Suite" title="runner.testRunner" class="method navigator-link" hash-for-method="runScenario(&quot;User selects a specific product from the search results&quot;, &quot;Search functionality&quot;)">runScenario("User selects a specific product from the search results", "Search functionality")</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
                         <a href="#" panel-name="suite-Suite" title="runner.testRunner" class="method navigator-link" hash-for-method="runScenario(&quot;User adds the selected product to the shopping cart&quot;, &quot;Search functionality&quot;)">runScenario("User adds the selected product to the shopping cart", "Search functionality")</a> <!-- method navigator-link -->
                       </span>
                       <br/>
-                    </div> <!-- method-list-content failed suite-Suite -->
+                    </div> <!-- method-list-content passed suite-Suite -->
                   </li>
                 </ul>
               </div> <!-- suite-section-content -->
@@ -119,29 +149,84 @@
     <div class="wrapper">
       <div class="main-panel-root">
         <div panel-name="suite-Suite" class="panel Suite">
-          <div class="suite-Suite-class-failed">
+          <div class="suite-Suite-class-passed">
             <div class="main-panel-header rounded-window-top">
-              <img src="failed.png"/>
+              <img src="passed.png"/>
               <span class="class-name">runner.testRunner</span>
             </div> <!-- main-panel-header rounded-window-top -->
             <div class="main-panel-content rounded-window-bottom">
+              <div class="method">
+                <div class="method-content">
+                  <a name="runScenario(&quot;User search valide product category on site&quot;, &quot;Search functionality&quot;)">
+                  </a> <!-- runScenario("User search valide product category on site", "Search functionality") -->
+                  <span class="method-name">runScenario</span>
+                  <span class="parameters">("User search valide product category on site", "Search functionality")</span>
+                  <em>
+(Runs Cucumber Scenarios)                  </em>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="runScenario(&quot;User successfully signs up with valid information&quot;, &quot;Login Functionality&quot;)">
+                  </a> <!-- runScenario("User successfully signs up with valid information", "Login Functionality") -->
+                  <span class="method-name">runScenario</span>
+                  <span class="parameters">("User successfully signs up with valid information", "Login Functionality")</span>
+                  <em>
+(Runs Cucumber Scenarios)                  </em>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="runScenario(&quot;User successfully login with valid information&quot;, &quot;Login Functionality&quot;)">
+                  </a> <!-- runScenario("User successfully login with valid information", "Login Functionality") -->
+                  <span class="method-name">runScenario</span>
+                  <span class="parameters">("User successfully login with valid information", "Login Functionality")</span>
+                  <em>
+(Runs Cucumber Scenarios)                  </em>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="runScenario(&quot;User supdates quantity of the product from cart&quot;, &quot;Search functionality&quot;)">
+                  </a> <!-- runScenario("User supdates quantity of the product from cart", "Search functionality") -->
+                  <span class="method-name">runScenario</span>
+                  <span class="parameters">("User supdates quantity of the product from cart", "Search functionality")</span>
+                  <em>
+(Runs Cucumber Scenarios)                  </em>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="runScenario(&quot;User search specific product with SKU and adds product in cart&quot;, &quot;Search functionality&quot;)">
+                  </a> <!-- runScenario("User search specific product with SKU and adds product in cart", "Search functionality") -->
+                  <span class="method-name">runScenario</span>
+                  <span class="parameters">("User search specific product with SKU and adds product in cart", "Search functionality")</span>
+                  <em>
+(Runs Cucumber Scenarios)                  </em>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="runScenario(&quot;User selects a specific product from the search results&quot;, &quot;Search functionality&quot;)">
+                  </a> <!-- runScenario("User selects a specific product from the search results", "Search functionality") -->
+                  <span class="method-name">runScenario</span>
+                  <span class="parameters">("User selects a specific product from the search results", "Search functionality")</span>
+                  <em>
+(Runs Cucumber Scenarios)                  </em>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
               <div class="method">
                 <div class="method-content">
                   <a name="runScenario(&quot;User adds the selected product to the shopping cart&quot;, &quot;Search functionality&quot;)">
                   </a> <!-- runScenario("User adds the selected product to the shopping cart", "Search functionality") -->
                   <span class="method-name">runScenario</span>
                   <span class="parameters">("User adds the selected product to the shopping cart", "Search functionality")</span>
-                  <div class="stack-trace">java.lang.AssertionError: expected [MSP64LT20025] but found [MSP64LT10025]
-	at steps.SearchSteps.userSeesCartPageWithProduct(SearchSteps.java:129)
-	at ✽.User able to see Cart page with product &quot;MSP64LT20025&quot;(file:///C:/Users/I5310/eclipse-workspace/SDET_Sameer/src/test/resources/feature/search.feature:41)
-... Removed 6 stack frames
-</div> <!-- stack-trace -->
                   <em>
 (Runs Cucumber Scenarios)                  </em>
                 </div> <!-- method-content -->
               </div> <!-- method -->
             </div> <!-- main-panel-content rounded-window-bottom -->
-          </div> <!-- suite-Suite-class-failed -->
+          </div> <!-- suite-Suite-class-passed -->
         </div> <!-- panel Suite -->
         <div panel-name="test-xml-Suite" class="panel">
           <div class="main-panel-header rounded-window-top">
@@ -202,16 +287,40 @@ data.addColumn('number', 'Number');
 data.addColumn('string', 'Method');
 data.addColumn('string', 'Class');
 data.addColumn('number', 'Time (ms)');
-data.addRows(1);
+data.addRows(7);
 data.setCell(0, 0, 0)
 data.setCell(0, 1, 'runScenario')
 data.setCell(0, 2, 'runner.testRunner')
-data.setCell(0, 3, 50731);
+data.setCell(0, 3, 37150);
+data.setCell(1, 0, 1)
+data.setCell(1, 1, 'runScenario')
+data.setCell(1, 2, 'runner.testRunner')
+data.setCell(1, 3, 35952);
+data.setCell(2, 0, 2)
+data.setCell(2, 1, 'runScenario')
+data.setCell(2, 2, 'runner.testRunner')
+data.setCell(2, 3, 34338);
+data.setCell(3, 0, 3)
+data.setCell(3, 1, 'runScenario')
+data.setCell(3, 2, 'runner.testRunner')
+data.setCell(3, 3, 25912);
+data.setCell(4, 0, 4)
+data.setCell(4, 1, 'runScenario')
+data.setCell(4, 2, 'runner.testRunner')
+data.setCell(4, 3, 25131);
+data.setCell(5, 0, 5)
+data.setCell(5, 1, 'runScenario')
+data.setCell(5, 2, 'runner.testRunner')
+data.setCell(5, 3, 24029);
+data.setCell(6, 0, 6)
+data.setCell(6, 1, 'runScenario')
+data.setCell(6, 2, 'runner.testRunner')
+data.setCell(6, 3, 19504);
 window.suiteTableData['Suite']= { tableData: data, tableDiv: 'times-div-Suite'}
 return data;
 }
               </script>
-              <span class="suite-total-time">Total running time: 50 seconds</span>
+              <span class="suite-total-time">Total running time: 3 minutes</span>
               <div id="times-div-Suite">
               </div> <!-- times-div-Suite -->
             </div> <!-- times-div -->
@@ -239,18 +348,40 @@ return data;
             <div class="chronological-class">
               <div class="chronological-class-name">runner.testRunner</div> <!-- chronological-class-name -->
               <div class="configuration-class before">
-                <span class="method-name">setUpClass(org.testng.TestRunner@580902cd)</span>
+                <span class="method-name">setUpClass(org.testng.TestRunner@59b853aa)</span>
                 <span class="method-start">0 ms</span>
               </div> <!-- configuration-class before -->
               <div class="test-method">
-                <img src="failed.png">
-                </img>
+                <span class="method-name">runScenario("User search specific product with SKU and adds product in cart", "Search functionality")</span>
+                <span class="method-start">1356 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <span class="method-name">runScenario("User supdates quantity of the product from cart", "Search functionality")</span>
+                <span class="method-start">37311 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <span class="method-name">runScenario("User successfully login with valid information", "Login Functionality")</span>
+                <span class="method-start">74463 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <span class="method-name">runScenario("User successfully signs up with valid information", "Login Functionality")</span>
+                <span class="method-start">93968 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <span class="method-name">runScenario("User search valide product category on site", "Search functionality")</span>
+                <span class="method-start">128307 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <span class="method-name">runScenario("User selects a specific product from the search results", "Search functionality")</span>
+                <span class="method-start">152337 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
                 <span class="method-name">runScenario("User adds the selected product to the shopping cart", "Search functionality")</span>
-                <span class="method-start">1215 ms</span>
+                <span class="method-start">177469 ms</span>
               </div> <!-- test-method -->
               <div class="configuration-class after">
                 <span class="method-name">tearDownClass</span>
-                <span class="method-start">51953 ms</span>
+                <span class="method-start">203385 ms</span>
               </div> <!-- configuration-class after -->
           </div> <!-- main-panel-content rounded-window-bottom -->
         </div> <!-- panel -->

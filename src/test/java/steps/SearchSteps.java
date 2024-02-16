@@ -43,7 +43,7 @@ public class SearchSteps {
 	@When("User clicks search icon")
 	public void userClicksSearchIcon() {
 		search.clickSearchIcon();
-		logger.info("In Logger, clicking on search");
+		logger.info("clicking on search");
 	}
 
 	@When("User enters search input {string}")
@@ -62,7 +62,7 @@ public class SearchSteps {
 
 		else if (search.isSearchShowingNoProduct() == true) {
 			Assert.assertTrue(false);
-			System.out.println("No Product found");
+			logger.error("No product found");
 		}
 	}
 
@@ -115,6 +115,7 @@ public class SearchSteps {
     @Then("user able to see Add to Bag confirmation pop up")
     public void userSeesAddToBagConfirmationPopup() {
         pdp.verifyAddedToBagConfirmation();
+        logger.info("Successfully added to bag");
     }
 
     @When("User clicks on Checkout")
@@ -127,6 +128,7 @@ public class SearchSteps {
        
        
        org.testng.Assert.assertEquals(checkout.getSKUName(), base.getSKUFromExcel());
+       logger.info("Cart has the listed product");
        
     }
     
@@ -147,11 +149,13 @@ public class SearchSteps {
     	
         if (Quantity==1) {
         	pdp.increaseQuanity();
+        	logger.info("Qty increased by 1");
 		}
         else {
         	for(int qty = 1; qty<Quantity; qty++) {
         		pdp.increaseQuanity();
         	}
+        	logger.info("Qty updated to " + newQuantity);
 		}
         
         
