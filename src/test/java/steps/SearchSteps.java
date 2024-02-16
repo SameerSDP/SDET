@@ -10,6 +10,7 @@ import Page.CheckoutPage;
 import Page.LoginPage;
 import Page.PDPage;
 import Page.SearchPage;
+import Utility.BaseMethod;
 import io.cucumber.java.en.And;
 import io.cucumber.java.en.Then;
 
@@ -27,6 +28,7 @@ public class SearchSteps {
 	Page.CheckoutPage checkout;
 	WebElement product;
 	WebElement firstProduct;
+	BaseMethod base;
 	private static final Logger logger = Logger.getLogger(Hooks.class);
 
 	public SearchSteps() {
@@ -34,6 +36,7 @@ public class SearchSteps {
 		search = new SearchPage(driver);
 		pdp = new PDPage(driver);
 		checkout = new CheckoutPage(driver);
+		base = new BaseMethod(driver);
 		
 	}
 
@@ -65,8 +68,10 @@ public class SearchSteps {
 
 	@Then("the user selects a specific product from the search results with {string}")
 	public void selectSpecificProduct(String productName) {
-
-		product = search.getProductFromProductName(productName);
+		
+		//Using excel input instead of Cucumber scenario
+		String productNametext = base.getProductNameFromExcel();
+		product = search.getProductFromProductName(productNametext);
 
 		if (product == null) {
 			Assert.assertTrue(false);
@@ -86,8 +91,10 @@ public class SearchSteps {
 	
     @And("the user selects {string} and {string} of product")
     public void userSelectsColorAndSize(String color, String size) {
-        WebElement colorElement = pdp.getColorSwatchFromColor(color);
-        WebElement sizeElement = pdp.getSizeSwatchFromSizeString(size);
+    	
+    	
+        WebElement colorElement = pdp.getColorSwatchFromColor(base.getColorFromExcel());
+        WebElement sizeElement = pdp.getSizeSwatchFromSizeString(base.getSizeFromExcel());
         
         pdp.selectColorAndSize(colorElement, sizeElement);
     }
@@ -119,7 +126,7 @@ public class SearchSteps {
     public void userSeesCartPageWithProduct(String productName) {
        
        
-       org.testng.Assert.assertEquals(checkout.getSKUName(), productName);
+       org.testng.Assert.assertEquals(checkout.getSKUName(), base.getSKUFromExcel());
        
     }
     
