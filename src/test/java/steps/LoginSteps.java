@@ -49,7 +49,7 @@ public class LoginSteps  {
     	String url = ConfigReader.getUrl();
         driver.get(url);
         logger.info("Navigated to url: " + url );
-        //login.acceptCookiePopUp();
+        login.acceptCookiePopUp();
    
        
     }

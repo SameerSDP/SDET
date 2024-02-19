@@ -61,7 +61,8 @@ public class LoginPage {
 
 	public void acceptCookiePopUp() {
 		wait.until(ExpectedConditions.visibilityOf(btnAcceptCookies));
-		btnAcceptCookies.click();
+		//btnAcceptCookies.click();
+		base.clickElementWithJavaScript(btnAcceptCookies, driver);
 	}
 
 	public void enterSignInCredential(String userName, String pwd) {
